@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 10%; /* Softer dark background */
+    --foreground: 210 20% 95%; /* Soft light text */
+    --card: 240 5% 15%; /* Slightly lighter dark card */
+    --card-foreground: 210 20% 95%;
+    --popover: 240 5% 15%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 142.1 76.2% 36.3%; /* A sophisticated green */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 20%; /* Darker gray for secondary elements */
+    --secondary-foreground: 210 20% 95%;
+    --muted: 240 5% 20%;
+    --muted-foreground: 215 15% 65%; /* Softer muted text */
+    --accent: 240 5% 20%;
+    --accent-foreground: 210 20% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 25%; /* Subtle border color */
+    --input: 240 5% 20%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 220 10% 10%;
+    --foreground: 210 20% 95%;
+    --card: 240 5% 15%;
+    --card-foreground: 210 20% 95%;
+    --popover: 240 5% 15%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 20%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 240 5% 20%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 240 5% 20%;
+    --accent-foreground: 210 20% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 25%;
+    --input: 240 5% 20%;
+    --ring: 142.1 76.2% 36.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+ /* Custom Keyframes for Advanced Animations */
+        @keyframes pulse-subtle {
+          0% {
+            opacity: 0.1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.15;
+            transform: scale(1.02);
+          }
+          100% {
+            opacity: 0.1;
+            transform: scale(1);
+          }
+        }
+        .animate-pulse-subtle {
+          animation: pulse-subtle 18s infinite ease-in-out;
+        }
+
+        @keyframes bounce-subtle {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+        }
+        .animate-bounce-subtle {
+          animation: bounce-subtle 3s infinite ease-in-out;
+        }
+
+        @keyframes float-subtle {
+          0%,
+          100% {
+            transform: translateY(0) translateX(0);
+          }
+          33% {
+            transform: translateY(-3px) translateX(3px);
+          }
+          66% {
+            transform: translateY(3px) translateX(-3px);
+          }
+        }
+        .animate-float-subtle {
+          animation: float-subtle 4s infinite ease-in-out;
+        }
+
+        @keyframes flash-subtle {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.9;
+          }
+        }
+        .animate-flash-subtle {
+          animation: flash-subtle 2.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-icon {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+        .animate-pulse-icon {
+          animation: pulse-icon 2s infinite ease-in-out;
+        }
+
+        /* Text Gradients (more refined) */
+        .text-gradient-primary {
+          background-image: linear-gradient(
+            to right,
+            #0f9d58,
+            #34a853,
+            #1e824a
+          ); /* More nuanced green */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        .text-gradient-secondary {
+          background-image: linear-gradient(
+            to right,
+            #4285f4,
+            #669df6,
+            #3b79d3
+          ); /* More nuanced blue */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        /* Custom Glow Effects for Cards (Larger, more diffused) */
+        .hover\\:shadow-primary-glow-xl {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-primary-glow-xl {
+          box-shadow: 0 0 80px rgba(15, 157, 88, 0.7),
+            0 0 120px rgba(15, 157, 88, 0.3); /* Multi-layer glow */
+        }
+
+        .hover\\:shadow-blue-glow-xl {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-blue-glow-xl {
+          box-shadow: 0 0 80px rgba(66, 133, 244, 0.7),
+            0 0 120px rgba(66, 133, 244, 0.3);
+        }
+
+        .hover\\:shadow-yellow-glow-xl {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-yellow-glow-xl {
+          box-shadow: 0 0 80px rgba(251, 188, 5, 0.7),
+            0 0 120px rgba(251, 188, 5, 0.3);
+        }
+
+        .hover\\:shadow-purple-glow-xl {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-purple-glow-xl {
+          box-shadow: 0 0 80px rgba(139, 92, 246, 0.7),
+            0 0 120px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Custom Easing for Smoother Animations */
+        .ease-out-expo {
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .ease-out-back {
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .ease-out-quart {
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* Inner shadow for the paragraph */
+        .shadow-inner-lg {
+          box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation for the spinning border on button */
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+         /* Text Gradients (refined, ensure these are in your global CSS) */
+        .text-gradient-primary {
+          background-image: linear-gradient(
+            to right,
+            #0f9d58,
+            #34a853,
+            #1e824a
+          ); /* Nuanced green */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        .text-gradient-destructive {
+          background-image: linear-gradient(
+            to right,
+            #ea4335,
+            #e65d50,
+            #d3392d
+          ); /* Nuanced red */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        /* Custom Glow Effects for Cards (Larger, more diffused) */
+        .hover\\:shadow-primary-glow-lg {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-primary-glow-lg {
+          box-shadow: 0 0 50px rgba(15, 157, 88, 0.5),
+            0 0 80px rgba(15, 157, 88, 0.2); /* Multi-layer glow */
+        }
+
+        .hover\\:shadow-destructive-glow-lg {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-destructive-glow-lg {
+          box-shadow: 0 0 50px rgba(234, 67, 53, 0.5),
+            0 0 80px rgba(234, 67, 53, 0.2);
+        }
+
+        /* Custom Easing for Smoother Animations */
+        .ease-out-back {
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Keyframes for subtle icon pulse */
+        @keyframes pulse-icon-red {
+          0%, 100% { transform: scale(1) rotate(-12deg); opacity: 1; }
+          50% { transform: scale(1.05) rotate(-12deg); opacity: 0.95; }
+        }
+        .animate-pulse-icon-red {
+          animation: pulse-icon-red 2.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-icon-green {
+          0%, 100% { transform: scale(1) rotate(12deg); opacity: 1; }
+          50% { transform: scale(1.05) rotate(12deg); opacity: 0.95; }
+        }
+        .animate-pulse-icon-green {
+          animation: pulse-icon-green 2.5s infinite ease-in-out;
+        }
+
+
+        /* Text Gradients (refined, ensure these are in your global CSS) */
+        .text-gradient-primary {
+          background-image: linear-gradient(
+            to right,
+            #0f9d58,
+            #34a853,
+            #1e824a
+          ); /* Nuanced green */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        /* Custom Glow Effects for Cards (Larger, more diffused) */
+        .hover\\:shadow-primary-glow-md {
+          box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        }
+        .group:hover .hover\\:shadow-primary-glow-md {
+          box-shadow: 0 0 30px rgba(15, 157, 88, 0.4),
+            0 0 60px rgba(15, 157, 88, 0.15); /* Multi-layer glow */
+        }
+
+        /* Custom Easing for Smoother Animations */
+        .ease-out-back {
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+         /* Swiper overrides for dark theme */
+        .swiper-pagination-bullet {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+        .swiper-pagination-bullet-active {
+          background-color: var(--primary-500); /* Use your primary color variable */
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: var(--primary-500); /* Use your primary color variable */
+        }
+
+        /* Custom Keyframes */
+        @keyframes pulse-background {
+          0% { transform: scale(1); opacity: 0.1; }
+          50% { transform: scale(1.02); opacity: 0.12; }
+          100% { transform: scale(1); opacity: 0.1; }
+        }
+        .animate-pulse-background {
+          animation: pulse-background 20s infinite ease-in-out;
+        }
+
+        /* Text Gradients */
+        .text-gradient-primary {
+          background-image: linear-gradient(to right, #0f9d58, #34a853, #1e824a);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+        .text-gradient-secondary {
+          background-image: linear-gradient(to right, #4285f4, #669df6, #3b79d3);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent; /* Fallback */
+        }
+
+        /* Custom Easing */
+        .ease-out-expo { transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+        .ease-out-quart { transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .ease-out-back { transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+        /* Custom Shadows for Glassmorphic Effect */
+        .shadow-heavy { box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7); }
+        .shadow-3xl { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); }
+
+        /* Custom Glow Effects for Cards (similar to previous sections) */
+        .hover\\:shadow-primary-glow-md { box-shadow: 0 0 0px rgba(0, 0, 0, 0); }
+        .group:hover .hover\\:shadow-primary-glow-md {
+          box-shadow: 0 0 30px rgba(15, 157, 88, 0.4), 0 0 60px rgba(15, 157, 88, 0.15);
+        }
+
+        /* Essential for GSAP horizontal pinning */
+        .gsap-pin-spacer {
+          box-sizing: border-box; /* Fix for potential layout issues */
+        }
