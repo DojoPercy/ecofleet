@@ -128,16 +128,7 @@ export default function EcoFleetLandingPage() {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             
-            <Button
-              asChild
-              variant="outline"
-              className="h-12 px-8 text-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105 bg-transparent"
-            >
-           <a href="/ecofleet-pdf.pdf" download target="_blank" rel="noopener noreferrer">
-  Download Proposal
-</a>
-
-            </Button>
+        
           </motion.div>
         </div>
       </section>
@@ -197,11 +188,8 @@ export default function EcoFleetLandingPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-3 text-muted-foreground">
-                    <p>
-                      <span className="font-semibold text-foreground">Cost:</span> GHS 250,000 per unit (100 kW)
-                    </p>
+                
                     <p>Ideal for rapid top-ups and high-utilization vehicles at strategic depots.</p>
-                    <p className="text-sm">Recommended: 3 units for key operational hubs.</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -214,11 +202,8 @@ export default function EcoFleetLandingPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-3 text-muted-foreground">
-                    <p>
-                      <span className="font-semibold text-foreground">Cost:</span> GHS 50,000 per unit (22 kW)
-                    </p>
+                    
                     <p>Perfect for overnight charging, ensuring vehicles are ready for daily operations.</p>
-                    <p className="text-sm">Recommended: 10 units for comprehensive overnight charging.</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -252,29 +237,7 @@ export default function EcoFleetLandingPage() {
           <CostSavingsCalculator />
         </section>
 
-        {/* Implementation Timeline */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-card text-card-foreground bg-gradient-to-br from-gray-950 to-black">
-          <div className="container px-4 md:px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={fadeContainer.visible.transition}
-              variants={fadeContainer}
-              className="flex flex-col items-center justify-center space-y-6 text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Our Seamless <span className="text-primary">Implementation Timeline</span>
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A clear roadmap from contract signing to full operational readiness, ensuring a smooth transition for
-                BOST.
-              </p>
-            </motion.div>
-
-            <Timeline />
-          </div>
-        </section>
+ 
 
     
 
@@ -306,21 +269,8 @@ export default function EcoFleetLandingPage() {
                 cost-efficient future.
               </motion.p>
               <motion.div variants={fadeItem} className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                <Button
-                  asChild
-                  className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <Link href="#contact">Schedule Presentation</Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="h-12 px-8 text-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105 bg-transparent"
-                >
-                  <Link href="/EcoFleet_Proposal.pdf" target="_blank" rel="noopener noreferrer">
-                    Download Full Proposal
-                  </Link>
-                </Button>
+               
+               
                 <Button
                   asChild
                   variant="outline"
@@ -359,7 +309,7 @@ export default function EcoFleetLandingPage() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid md:grid-rows-1 gap-12 max-w-5xl mx-auto">
               <motion.div variants={fadeItem} className="space-y-6">
                 <Card className="bg-card border-border p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <CardHeader className="pb-4">
@@ -389,87 +339,12 @@ export default function EcoFleetLandingPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    <p>info@ecofleetghana.com (placeholder)</p>
+                    <p>info@ecofleetghana.com</p>
                   </CardContent>
                 </Card>
               </motion.div>
 
-              <motion.div variants={fadeItem}>
-                <Card className="bg-card border-border p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-xl font-semibold text-primary">Schedule Your Presentation</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <form className="space-y-4">
-                      <div>
-                        <Label htmlFor="name" className="text-muted-foreground">
-                          Your Name
-                        </Label>
-                        <Input
-                          id="name"
-                          type="text"
-                          placeholder="John Doe"
-                          className="mt-1 bg-secondary border-border text-foreground"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="company" className="text-muted-foreground">
-                          Company Name
-                        </Label>
-                        <Input
-                          id="company"
-                          type="text"
-                          placeholder="BOST"
-                          className="mt-1 bg-secondary border-border text-foreground"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="email" className="text-muted-foreground">
-                          Email Address
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john.doe@bost.com"
-                          className="mt-1 bg-secondary border-border text-foreground"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="phone" className="text-muted-foreground">
-                          Phone Number
-                        </Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="+233 24 123 4567"
-                          className="mt-1 bg-secondary border-border text-foreground"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="message" className="text-muted-foreground">
-                          Your Message (Optional)
-                        </Label>
-                        <textarea
-                          id="message"
-                          rows={4}
-                          className="flex w-full rounded-md border border-input bg-secondary px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 text-foreground"
-                          placeholder="Tell us about your fleet needs..."
-                        ></textarea>
-                      </div>
-                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                        Submit Request
-                      </Button>
-                    </form>
-                    <p className="text-xs text-muted-foreground mt-4">
-                      Your information will be used to schedule a presentation and will not be shared with third
-                      parties.
-                      <br />
-                      <span className="font-semibold text-foreground">Note:</span> In a real application, this form
-                      would integrate with a CRM (e.g., HubSpot, Webhook).
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
+           
             </div>
           </div>
         </section>
