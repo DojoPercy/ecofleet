@@ -75,7 +75,6 @@ export default function EcoFleetLandingPage() {
           <Button asChild size="sm" className="transition-all duration-300 hover:scale-105">
             <Link href="#cta">Request Demo</Link>
           </Button>
-          <ThemeToggle />
         </nav>
       </header>
 
@@ -161,7 +160,7 @@ export default function EcoFleetLandingPage() {
         <LeaseAndServices />
 
         {/* Charging Infrastructure */}
-        <section className="relative w-full py-16 md:py-24 lg:py-32 bg-card text-card-foreground overflow-hidden">
+        <section className="relative w-full py-16 md:py-24 lg:py-32 bg-card text-card-foreground overflow-hidden  bg-gradient-to-br from-gray-950 to-black">
           <Image
             src="/images/charging.png"
             alt="Charging Infrastructure Background"
@@ -190,7 +189,7 @@ export default function EcoFleetLandingPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div variants={fadeItem}>
-                <Card className="bg-background border-border p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                       <Bolt className="h-6 w-6" /> Fast DC Charging
@@ -207,7 +206,7 @@ export default function EcoFleetLandingPage() {
               </motion.div>
 
               <motion.div variants={fadeItem}>
-                <Card className="bg-background border-border p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <Card className="bg-gray-800/80 border border-gray-700/60 p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                       <Plug className="h-6 w-6" /> AC Charging
@@ -224,7 +223,7 @@ export default function EcoFleetLandingPage() {
               </motion.div>
 
               <motion.div variants={fadeItem}>
-                <Card className="bg-background border-border p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg h-full flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                       <Lightbulb className="h-6 w-6" /> Optional Solar-Powered Add-on
@@ -248,12 +247,12 @@ export default function EcoFleetLandingPage() {
         </section>
 
         {/* Cost Savings Calculator */}
-        <section id="savings" className="w-full py-16 md:py-24 lg:py-32 bg-background text-foreground">
+        <section id="savings" className="w-full py-16 md:py-24 lg:py-32 bg-background text-foreground  bg-gradient-to-br from-gray-950 to-black">
           <CostSavingsCalculator />
         </section>
 
         {/* Implementation Timeline */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-card text-card-foreground">
+        <section className="w-full py-16 md:py-24 lg:py-32 bg-card text-card-foreground bg-gradient-to-br from-gray-950 to-black">
           <div className="container px-4 md:px-6">
             <motion.div
               initial="hidden"

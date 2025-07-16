@@ -61,7 +61,7 @@ const ChallengeSolutionSection: React.FC = () => {
   return (
     <section className="w-full py-20 md:py-28 bg-gray-950 text-white relative">
       <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-        <div className="w-full h-full bg-[url('/path-to-subtle-grid-pattern.svg')] bg-repeat bg-center"></div>
+        <div className="w-full h-full bg-[url('/images/subtle_pattern.png')] bg-repeat bg-center"></div>
       </div>
       <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: 'radial-gradient(circle at 75% 15%, rgba(66, 133, 244, 0.05) 0%, transparent 40%), radial-gradient(circle at 25% 85%, rgba(15, 157, 88, 0.05) 0%, transparent 40%), linear-gradient(to top, rgba(0,0,0,0.4), transparent 70%)' }}></div>
 

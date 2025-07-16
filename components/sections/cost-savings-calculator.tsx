@@ -31,7 +31,7 @@ export function CostSavingsCalculator() {
   const totalAnnualSavings = totalCurrentCost - totalEvCost
 
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-background text-foreground">
+    <section className="py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-950 to-black text-foreground">
       <div className="container px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -53,10 +53,10 @@ export function CostSavingsCalculator() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           variants={fadeUp}
-          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto  "
         >
           {/* Current costs */}
-          <Card>
+          <Card className="bg-gray-800/80 border border-gray-700/60 ">
             <CardHeader>
               <CardTitle className="text-primary">Your Current Fleet Costs</CardTitle>
             </CardHeader>
@@ -110,7 +110,7 @@ export function CostSavingsCalculator() {
           </Card>
 
           {/* Savings */}
-          <Card>
+          <Card className="bg-gray-800/80 border border-gray-700/60 ">
             <CardHeader>
               <CardTitle className="text-primary">Projected Eco-Fleet Savings</CardTitle>
             </CardHeader>

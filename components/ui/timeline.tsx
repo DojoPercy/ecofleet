@@ -8,7 +8,7 @@ const fadeItem = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } 
 
 export function Timeline() {
   return (
-    <div className="relative max-w-5xl mx-auto">
+    <div className="relative max-w-5xl mx-auto ">
       <div className="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-primary/20 rounded-full hidden md:block"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-24">
         {/* Timeline Item 1 */}
@@ -21,7 +21,7 @@ export function Timeline() {
           className="flex flex-col md:flex-row items-center md:justify-end md:pr-12 relative"
         >
           <div className="md:order-2 md:ml-8 w-full md:w-auto">
-            <Card className="bg-background border-border p-6 shadow-lg w-full max-w-md">
+            <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg w-full max-w-md  ">
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                   <ClipboardCheck className="h-6 w-6" /> Contract Signing
@@ -48,7 +48,7 @@ export function Timeline() {
           className="flex flex-col md:flex-row items-center md:justify-start md:pl-12 relative"
         >
           <div className="md:order-1 md:mr-8 w-full md:w-auto">
-            <Card className="bg-background border-border p-6 shadow-lg w-full max-w-md">
+            <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg w-full max-w-md">
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                   <Truck className="h-6 w-6" /> Delivery & Commissioning
@@ -77,7 +77,7 @@ export function Timeline() {
           className="flex flex-col md:flex-row items-center md:justify-end md:pr-12 relative"
         >
           <div className="md:order-2 md:ml-8 w-full md:w-auto">
-            <Card className="bg-background border-border p-6 shadow-lg w-full max-w-md">
+            <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg w-full max-w-md">
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                   <Plug className="h-6 w-6" /> Charging Setup
@@ -104,7 +104,7 @@ export function Timeline() {
           className="flex flex-col md:flex-row items-center md:justify-start md:pl-12 relative"
         >
           <div className="md:order-1 md:mr-8 w-full md:w-auto">
-            <Card className="bg-background border-border p-6 shadow-lg w-full max-w-md">
+            <Card className="bg-gray-800/80 border border-gray-700/60  p-6 shadow-lg w-full max-w-md">
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
                   <Users className="h-6 w-6" /> Driver Training
