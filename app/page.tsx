@@ -33,10 +33,10 @@ const fadeContainer = {
 const fadeItem = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
 
 const heroImages = [
-  "/images/byd-qin-l-banner.jpg",
+  "/images/hero3.jpg",
   "/images/byd-qin-l-driving.jpg",
   "/images/lynk-co-900-front.jpg",
-  "/images/hero3.jpg",
+  "/images/byd-qin-l-banner.jpg",
 ]
 
 export default function EcoFleetLandingPage() {
@@ -45,7 +45,7 @@ export default function EcoFleetLandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex: number) => (prevIndex + 1) % heroImages.length)
-    }, 7000) // Change image every 7 seconds
+    }, 7000) 
     return () => clearInterval(interval)
   }, [])
   return (
@@ -79,7 +79,7 @@ export default function EcoFleetLandingPage() {
       </header>
 
       <main className="flex-1 w[100vw]">
-        {/* Hero Section */}
+       
          <section
         id="hero"
         className="relative w-full h-[90vh] md:h-[95vh] flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-zinc-950 to-zinc-800"
