@@ -78,7 +78,7 @@ export default function EcoFleetLandingPage() {
         </nav>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1 w[100vw]">
         {/* Hero Section */}
          <section
         id="hero"
@@ -133,9 +133,10 @@ export default function EcoFleetLandingPage() {
               variant="outline"
               className="h-12 px-8 text-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105 bg-transparent"
             >
-              <Link href="/EcoFleet_Proposal.pdf" target="_blank" rel="noopener noreferrer">
-                Download Proposal
-              </Link>
+           <a href="/ecofleet-pdf.pdf" download target="_blank" rel="noopener noreferrer">
+  Download Proposal
+</a>
+
             </Button>
           </motion.div>
         </div>

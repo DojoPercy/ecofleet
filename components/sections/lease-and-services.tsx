@@ -5,12 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Clock, Wrench, DollarSign, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
-// Framer Motion variants for smooth animations
+// Framer Motion variants for smooth entrance animations
 const fadeContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 }, // Slightly more delay and stagger for a grander entrance
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
   },
 }
 
@@ -21,14 +21,14 @@ const fadeItem = {
     y: 0,
     transition: {
       duration: 0.7,
-      ease: [0.25, 0.46, 0.45, 0.94], // Custom bezier curve for a smooth, fluid animation
+      ease: [0.25, 0.46, 0.45, 0.94], // Custom bezier curve for a fluid animation
     },
   },
 }
 
 export function LeaseAndServices() {
   return (
-    <section className="relative w-full py-20 md:py-28 lg:py-36 bg-gradient-to-br from-gray-950 to-black text-gray-50 overflow-hidden">
+    <section className="relative w-full py-20 md:py-28 lg:py-36 bg-gradient-to-br from-gray-950 to-black text-gray-50 overflow-x-hidden">
       {/* Background Image with overlay for better contrast */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,10 +37,10 @@ export function LeaseAndServices() {
           layout="fill"
           objectFit="cover"
           quality={80}
-          className="opacity-15" // Slightly more visible background image
+          className="opacity-15"
         />
         {/* Darker overlay for strong text contrast */}
-        <div className="absolute inset-0  bg-gradient-to-br from-gray-950 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-black"></div>
       </div>
       <div className="relative z-10 container px-4 md:px-6">
         {/* Section Heading */}
@@ -49,7 +49,7 @@ export function LeaseAndServices() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeContainer}
-          className="flex flex-col items-center justify-center space-y-5 text-center mb-12 md:mb-20" // Increased spacing and margin below heading
+          className="flex flex-col items-center justify-center space-y-5 text-center mb-12 md:mb-20"
         >
           <motion.h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl max-w-4xl leading-tight">
             {"Flexible Lease Terms & "}
@@ -59,18 +59,17 @@ export function LeaseAndServices() {
             Our hassle-free leasing minimizes upfront costs, ensuring optimal fleet performance and peace of mind.
           </motion.p>
         </motion.div>
+
         {/* Content Grid - Apply fadeContainer to the grid itself */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeContainer}
-          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch" // Increased gap between columns, items-stretch ensures cards have equal height
+          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch overflow-hidden" // items-stretch ensures cards have equal height
         >
           {/* Key Lease Terms & Inclusive Services Column */}
           <motion.div variants={fadeItem} className="flex flex-col">
-            {" "}
-            {/* Apply fadeItem to each card wrapper */}
             <Card className="bg-gray-800/80 border border-gray-700/60 p-6 sm:p-8 shadow-2xl rounded-xl h-full flex flex-col transition-all duration-500 ease-out-expo hover:translate-y-[-5px] hover:shadow-primary-lg">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl sm:text-3xl font-bold text-primary-400 flex items-center gap-4">
@@ -111,9 +110,8 @@ export function LeaseAndServices() {
             </Card>
           </motion.div>
 
+          {/* Inclusive Services Column */}
           <motion.div variants={fadeItem} className="flex flex-col">
-            {" "}
-            {/* Apply fadeItem to each card wrapper */}
             <Card className="bg-gray-800/80 border border-gray-700/60 p-6 sm:p-8 shadow-2xl rounded-xl h-full flex flex-col transition-all duration-500 ease-out-expo hover:translate-y-[-5px] hover:shadow-primary-lg">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl sm:text-3xl font-bold text-primary-400 flex items-center gap-4">
@@ -148,8 +146,6 @@ export function LeaseAndServices() {
 
           {/* Monthly Lease Overview Column */}
           <motion.div variants={fadeItem} className="md:col-span-2 flex flex-col">
-            {" "}
-            {/* Apply fadeItem and make it span two columns on md+ */}
             <Card className="bg-gray-800/80 border border-gray-700/60 p-6 sm:p-8 shadow-2xl rounded-xl h-full flex flex-col transition-all duration-500 ease-out-expo hover:translate-y-[-5px] hover:shadow-primary-lg">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl sm:text-3xl font-bold text-primary-400 flex items-center gap-4">
@@ -158,7 +154,7 @@ export function LeaseAndServices() {
               </CardHeader>
               <CardContent className="flex-1 text-gray-300">
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse min-w-[400px]">
+                  <table className="w-full text-left border-collapse table-auto">
                     <thead>
                       <tr className="border-b border-gray-600/70">
                         <th className="py-4 px-3 font-semibold text-gray-50 text-lg sm:text-xl">Vehicle Type</th>
@@ -170,30 +166,30 @@ export function LeaseAndServices() {
                     </thead>
                     <tbody>
                       <tr className="border-b border-gray-700/50">
-                        <td className="py-3 px-3 text-lg">Electric Pickup</td>
-                        <td className="py-3 px-3 text-right text-lg">2</td>
-                        <td className="py-3 px-3 text-right text-lg">60,000</td>
+                        <td className="py-3 px-3 text-base lg:text-lg">Electric Pickup</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">2</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">60,000</td>
                       </tr>
                       <tr className="border-b border-gray-700/50">
-                        <td className="py-3 px-3 text-lg">Electric Bus</td>
-                        <td className="py-3 px-3 text-right text-lg">1</td>
-                        <td className="py-3 px-3 text-right text-lg">30,000</td>
+                        <td className="py-3 px-3 text-base lg:text-lg">Electric Bus</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">1</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">30,000</td>
                       </tr>
                       <tr className="border-b border-gray-700/50">
-                        <td className="py-3 px-3 text-lg">Four-wheel drive</td>
-                        <td className="py-3 px-3 text-right text-lg">3</td>
-                        <td className="py-3 px-3 text-right text-lg">135,000</td>
+                        <td className="py-3 px-3 text-base lg:text-lg">Four-wheel drive</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">3</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">135,000</td>
                       </tr>
                       <tr className="border-b border-gray-700/50">
-                        <td className="py-3 px-3 text-lg">Electric Saloon Car</td>
-                        <td className="py-3 px-3 text-right text-lg">5</td>
-                        <td className="py-3 px-3 text-right text-lg">75,000</td>
+                        <td className="py-3 px-3 text-base lg:text-lg">Electric Saloon Car</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">5</td>
+                        <td className="py-3 px-3 text-right text-base lg:text-lg">75,000</td>
                       </tr>
                       {/* Total Row - Highly emphasized */}
                       <tr className="font-bold text-gray-50 bg-primary-400/20">
-                        <td className="py-4 px-3 text-xl">Total Monthly Lease</td>
-                        <td className="py-4 px-3 text-right text-xl"></td>
-                        <td className="py-4 px-3 text-right text-xl">300,000</td>
+                        <td className="py-4 px-3 text-lg sm:text-xl">Total Monthly Lease</td>
+                        <td className="py-4 px-3 text-right text-lg sm:text-xl"></td>
+                        <td className="py-4 px-3 text-right text-lg sm:text-xl">300,000</td>
                       </tr>
                     </tbody>
                   </table>
