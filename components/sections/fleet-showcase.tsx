@@ -319,13 +319,29 @@ export function FleetShowcase() {
           </div>
         </div>
       ) : (
-        <div className="px-6 md:px-12 lg:px-24 pb-24">
-          <Swiper
+        <div className="px-6 md:px-12 lg:px-24 pb-24 relative max-w-2xl mx-auto">
+       
+              <div className="">
+  <div className="swiper-button-prev-custom absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 p-3 rounded-full shadow-lg transition">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+    </svg>
+  </div>
+
+  <div className="swiper-button-next-custom absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 p-3 rounded-full shadow-lg transition">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+</div>
+                 <Swiper
             modules={[Pagination, Navigation, A11y]}
             spaceBetween={30}
             slidesPerView={1}
-            pagination={{ clickable: true }}
-            navigation
+            pagination={{ clickable: true }}  navigation={{
+    prevEl: '.swiper-button-prev-custom',
+    nextEl: '.swiper-button-next-custom',
+  }}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="w-full max-w-2xl mx-auto"
           >
@@ -334,8 +350,13 @@ export function FleetShowcase() {
                 <MobileVehicleCard vehicle={vehicle} showImage={true} />
               </SwiperSlide>
             ))}
+          
+
           </Swiper>
-        </div>
+            
+          </div>
+     
+       
       )}
     </section>
   );
