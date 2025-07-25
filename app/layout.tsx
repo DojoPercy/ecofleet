@@ -1,10 +1,32 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Script from 'next/script';
+
+<Script id="json-ld-organization" type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Eco-Fleet Ghana",
+    url: "https://www.ecofleet.africa",
+    logo: "https://www.ecofleet.africa/assets/images/ecologo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+233551562590",
+      contactType: "Customer Service",
+      areaServed: "GH",
+      availableLanguage: "English",
+    },
+  })}
+</Script>
+
 
 export const metadata: Metadata = {
   title: 'Eco-Fleet Ghana | Electric Vehicle Fleet Leasing for Corporates & Government',
   description:
     'Eco-Fleet Ghana provides sustainable, cost-efficient electric vehicle (EV) fleet solutions for corporate, government, and industrial clients. Enjoy up to 70% fuel savings, zero emissions, and seamless charging infrastructure. Transform your fleet today.',
+     icons: {
+    icon: '/favicon.ico',
+  },
   keywords: [
     'Eco-Fleet Ghana',
     'Electric Vehicles Ghana',
