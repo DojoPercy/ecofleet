@@ -18,7 +18,7 @@ function AnimatedNumber({ n, suffix }: { n: number; suffix: string }) {
   const { number } = useSpring({
     from: { number: 0 },
     to: { number: n },
-    delay: 1000, // Small delay for number animation after card appears
+    delay: 700, // Small delay for number animation after card appears
     config: { mass: 1, tension: 100, friction: 20, clamp: true }, // More snappy and controlled spring
   });
 

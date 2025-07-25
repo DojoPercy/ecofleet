@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Clock, Wrench, DollarSign, CheckCircle } from "lucide-react"
+import { Clock, Wrench, DollarSign, CheckCircle, BadgeCent } from "lucide-react"
 import Image from "next/image"
 
 // Framer Motion variants for smooth entrance animations
@@ -28,7 +28,7 @@ const fadeItem = {
 
 export function LeaseAndServices() {
   return (
-    <section className="relative w-full py-20 md:py-28 lg:py-36 bg-gradient-to-br from-gray-950 to-black text-gray-50 overflow-x-hidden">
+    <section className="relative w-full py-20 md:py-28 lg:py-36 text-gray-50 overflow-x-hidden">
       {/* Background Image with overlay for better contrast */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -149,7 +149,7 @@ export function LeaseAndServices() {
             <Card className="bg-gray-800/80 border border-gray-700/60 p-6 sm:p-8 shadow-2xl rounded-xl h-full flex flex-col transition-all duration-500 ease-out-expo hover:translate-y-[-5px] hover:shadow-primary-lg">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl sm:text-3xl font-bold text-primary-400 flex items-center gap-4">
-                  <DollarSign className="h-9 w-9" /> Monthly Lease Overview
+                  <BadgeCent className="h-9 w-9" /> Monthly Lease Overview
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-gray-300">
@@ -194,10 +194,7 @@ export function LeaseAndServices() {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-base mt-6 text-gray-400 leading-normal">
-                  <span className="font-semibold text-gray-200">Note:</span> Final pricing is negotiable based on lease
-                  duration and bulk discounts, ensuring a solution tailored to your budget.
-                </p>
+               
               </CardContent>
             </Card>
           </motion.div>

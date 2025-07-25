@@ -339,7 +339,7 @@ export default function EcoFleetLandingPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    <p>info@ecofleetghana.com</p>
+                    <p>info@ecofleet.africa</p>
                   </CardContent>
                 </Card>
               </motion.div>
