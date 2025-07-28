@@ -321,17 +321,24 @@ export default function EcoFleetLandingPage() {
                     <p>63, Olympic Street, Kokomlelmle, Accra, Ghana</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-card border-border p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
-                      <Phone className="h-6 w-6" /> Call Us
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-muted-foreground">
-                    <p>+233 55 156 2590</p>
-                    <p>+233 200 429 111</p>
-                  </CardContent>
-                </Card>
+               <Card className="bg-card border-border p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+  <CardHeader className="pb-4">
+    <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
+      <Phone className="h-6 w-6" /> Call Us
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="text-muted-foreground space-y-2">
+    <div>
+      <p className="font-medium">Maurice Cashinco</p>
+      <p>+233 55 156 2590</p>
+    </div>
+    <div>
+      <p className="font-medium">Wunam Andani</p>
+      <p>+233 54 124 6106</p>
+    </div>
+  </CardContent>
+</Card>
+
                 <Card className="bg-card border-border p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-semibold text-primary flex items-center gap-2">
